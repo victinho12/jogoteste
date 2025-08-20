@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Entrevista em Grupo</title>
+  <style>   
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .game-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 400px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      background: #eee;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    label:hover {
+      background: #ddd;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .feedback {
+      display: none;
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .success {
+      background: #c8f7c5;
+      color: #2d6a4f;
+    }
+
+    .fail {
+      background: #f7c5c5;
+      color: #6a2d2d;
+    }
+    h1{
+        display: flex;
+        width: 5px;
+        height: 5px;
+        align-items: end;
+    }
+
+    /* Mostrar feedback dependendo da escolha */
+    #choice1:checked ~ .feedback1,
+    #choice2:checked ~ .feedback2,
+    #choice3:checked ~ .feedback3 {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>15</h1>
+    <h2>Você tem um cliente insatisfeito na loja o que fazer?</h2>
+
+    <input type="radio" id="choice1" name="scenario">
+    <label for="choice1">Escuto o cliente com atenção e tento resolver o problema</label>
+
+    <input type="radio" id="choice2" name="scenario">
+    <label for="choice2">Ignoro o cliente e continuo meu trabalho</label>
+
+    <input type="radio" id="choice3" name="scenario">
+    <label for="choice3">Digo que o problema não é da minha responsabilidade</label>
+
+    <div class="feedback feedback1 success">
+      ✅ Excelente! Você mostrou empatia e proatividade, qualidades essenciais para o atendimento.
+    </div>
+    <div class="feedback feedback2 fail">
+      ❌ Atenção! Ignorar o cliente pode prejudicar a equipe e a experiência de compra.
+    </div>
+    <div class="feedback feedback3 fail">
+      ❌ Atenção! Evitar responsabilidades mostra falta de comprometimento com o cliente e equipe.
+    </div>
+  </div>
+</body>
+</html>
